@@ -194,14 +194,5 @@ namespace LiveSplit.PathOfExile2AutoSplitter.Component.Settings
             }
             return zones;
         }
-        public HashSet<string> SekhemaAreaIds { get; set; } = new HashSet<string>
-        {
-            "G2_13",              // Entry
-            "Sanctum_1_Foyer_1",  // Floor 1
-            "Sanctum_2_Foyer_3",  // Floor 2
-            "Sanctum_3_Foyer_3",  // Floor 3
-            "Sanctum_4_Foyer_3"   // Floor 4
-        };
-
     }
 }
