@@ -74,7 +74,42 @@ namespace LiveSplit.PathOfExile2AutoSplitter.Component.Timer
                 
                 encounteredCampaignAreas.Add(campaignArea);
             }
+            // --- Trials of the Sekhema handling ---
+            if (_settings.AutoSplitEnabled)
+            {
+                // Split when entering Trials of the Sekhema
+                if (areaId.Contains("G2_13"))
+                {
+                    _timer.Split(); // Entry split
+                    return;
+                }
             
+                // Split when entering each floor
+                if (areaId.Contains("Sanctum_1_Foyer_1"))
+                {
+                    _timer.Split(); // Floor 1
+                    return;
+                }
+            
+                if (areaId.Contains("Sanctum_2_Foyer_3"))
+                {
+                    _timer.Split(); // Floor 2
+                    return;
+                }
+            
+                if (areaId.Contains("Sanctum_3_Foyer_3"))
+                {
+                    _timer.Split(); // Floor 3
+                    return;
+                }
+            
+                if (areaId.Contains("Sanctum_4_Foyer_3"))
+                {
+                    _timer.Split(); // Floor 4
+                    return;
+                }
+            }
+
             _previousCampaignArea = campaignArea;
         }
 
